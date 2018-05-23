@@ -18,7 +18,6 @@
 
         <WebView x:Name="EditorView"
                  Margin="100 20"
-                 Height="300"
                  Source="ms-appx-web:///Editor/TextEditor.html"/>
 
         <TextBox x:Name="EditorHtmlTextBox"
