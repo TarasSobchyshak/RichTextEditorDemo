@@ -7,7 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource SystemControlChromeMediumLowAcrylicWindowMediumBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <WebView x:Name="EditorView"
+                 Margin="100 20"
+                 Height="300"
+                 Source="ms-appx-web:///Editor/TextEditor.html"/>
+
+        <TextBox x:Name="EditorHtmlTextBox"
+                 Grid.Row="2"
+                 MinHeight="100"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 Margin="100 20"
+                 />
+
+        <Button Margin="20"
+                Grid.Row="1"
+                Content="Fetch HTML"
+                Tapped="Button_Tapped"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
 
     </Grid>
 </Page>
